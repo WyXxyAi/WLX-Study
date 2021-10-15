@@ -1,4 +1,4 @@
-package MultiThread.ThreadSynchronization.SafeExamples;
+package MultiThread.ThreadSynchronization.ThreeUnsafeExamples;
 
 public class UnsafeBuyTicket {
     public static void main(String[] args) {
