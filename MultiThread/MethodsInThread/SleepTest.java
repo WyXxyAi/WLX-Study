@@ -1,8 +1,7 @@
-package Thread02Study;
+package MultiThread.MethodsInThread;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * @describtion : 模拟计时

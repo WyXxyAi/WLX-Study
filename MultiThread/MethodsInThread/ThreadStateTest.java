@@ -1,4 +1,4 @@
-package Thread02Study;
+package MultiThread.MethodsInThread;
 
 public class ThreadStateTest {
     public static void main(String[] args) throws InterruptedException {

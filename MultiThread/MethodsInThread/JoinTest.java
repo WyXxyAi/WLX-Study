@@ -1,5 +1,8 @@
-package Thread02Study;
+package MultiThread.MethodsInThread;
 
+/**
+ * @description : 模拟vip插队
+ */
 public class JoinTest implements Runnable{
     @Override
     public void run() {
