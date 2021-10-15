@@ -1,7 +1,6 @@
-package ThreadStudy;
+package Thread01Study;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 public class CallableTest implements Callable<String>{

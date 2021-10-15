@@ -1,4 +1,4 @@
-package ThreadStudy;
+package Thread01Study;
 
 public class TortoiseAndRabbitRace implements Runnable {
 

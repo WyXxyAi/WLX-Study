@@ -1,4 +1,4 @@
-package ThreadStudy;
+package Thread01Study;
 
 public class RunnableTest implements Runnable{
     @Override
