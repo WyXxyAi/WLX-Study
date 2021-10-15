@@ -11,7 +11,7 @@ class I1 implements GoOffWork{
     }
 }
 
-public class Lamda {
+public class Lamda01 {
     //2.静态内部类
     static class I2 implements GoOffWork{
         @Override
