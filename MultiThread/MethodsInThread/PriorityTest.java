@@ -1,4 +1,4 @@
-package Thread02Study;
+package MultiThread.MethodsInThread;
 
 class MyPriority implements Runnable{
     @Override

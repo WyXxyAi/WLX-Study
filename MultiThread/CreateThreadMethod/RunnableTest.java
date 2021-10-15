@@ -1,4 +1,4 @@
-package Thread01Study;
+package MultiThread.CreateThreadMethod;
 
 public class RunnableTest implements Runnable{
     @Override

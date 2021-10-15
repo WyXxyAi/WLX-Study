@@ -1,4 +1,4 @@
-package Thread02Study;
+package MultiThread.MethodsInThread;
 
 /**
  * @description : 模拟青壮年礼让老弱病残孕

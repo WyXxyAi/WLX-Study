@@ -1,5 +1,8 @@
-package Thread02Study;
+package MultiThread.MethodsInThread;
 
+/**
+ * @descreption : 不推荐直接 stop() 推荐使用标志位
+ */
 public class StopTest implements Runnable{
     private boolean flag = true;
     @Override

@@ -1,4 +1,4 @@
-package Thread01Study;
+package MultiThread.CreateThreadMethod;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;

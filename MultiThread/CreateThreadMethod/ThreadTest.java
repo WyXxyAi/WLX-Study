@@ -1,4 +1,4 @@
-package Thread01Study;
+package MultiThread.CreateThreadMethod;
 
 public class ThreadTest extends Thread{
     @Override
