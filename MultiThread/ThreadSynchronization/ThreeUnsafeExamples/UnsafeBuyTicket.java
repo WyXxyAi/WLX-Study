@@ -14,7 +14,11 @@ class BuyTickets implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            buy();
+            try {
+                buy();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
     //判断是否有票
@@ -26,7 +30,8 @@ class BuyTickets implements Runnable{
         return true;
     }
     //购买票
-    private void buy(){
+    private  void buy() throws InterruptedException {
+        Thread.sleep(100);
         if(ticketAlive()){
             System.out.println(Thread.currentThread().getName()+" 买到了第 "+tickets-- + " 张票 ");
         }else {

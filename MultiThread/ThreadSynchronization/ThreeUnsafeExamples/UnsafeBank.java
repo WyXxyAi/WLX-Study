@@ -3,8 +3,9 @@ package MultiThread.ThreadSynchronization.ThreeUnsafeExamples;
 public class UnsafeBank {
     public static void main(String[] args) {
         Bank bank = new Bank();
-        new Thread(bank,"付出").start();
-        new Thread(bank,"收获").start();
+        new Thread(bank,"小王").start();
+        new Thread(bank,"小红").start();
+        new Thread(bank,"小刘").start();
     }
 }
 
@@ -27,15 +28,15 @@ class Acount{
 }
 
 class Bank implements Runnable{
+    private Acount acount = new Acount("XXY",2000);
     @Override
     public void run() {
-        Acount acount = new Acount("XXY",2000);
         for (int i = 0; i < 10; i++) {
-            if (Thread.currentThread().getName().equals("付出")){
+            if (Thread.currentThread().getName().equals("小王")){
                 try {
                     Thread.sleep(2000);
                     saveMoney(Thread.currentThread().getName(),acount,500);
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -43,7 +44,7 @@ class Bank implements Runnable{
                 try {
                     Thread.sleep(1000);
                     drawMoney(Thread.currentThread().getName(),acount,1000);
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -54,11 +55,12 @@ class Bank implements Runnable{
         acount.setMoney(acount.getMoney()+money);
         System.out.println(name+" 存了: "+money+" 余额: "+acount.getMoney());
     }
-    public void drawMoney(String name,Acount acount,int money){
+    public synchronized void drawMoney(String name,Acount acount,int money){
         if (acount.getMoney()-money<0){
             System.out.println(" 余额不足,剩余: "+acount.getMoney());
+        }else {
+            acount.setMoney(acount.getMoney()-money);
+            System.out.println(name+" 取走: "+money+" 余额: "+acount.getMoney());
         }
-        acount.setMoney(acount.getMoney()-money);
-        System.out.println(name+" 取走: "+money+" 余额: "+acount.getMoney());
     }
 }
