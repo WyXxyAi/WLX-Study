@@ -3,6 +3,7 @@ package Algorithm.Primary;
 import java.util.Arrays;
 
 public class Solution {
+    //输出数组前n位
     public void SoutN(int[] nums,int index){
         System.out.print("[ ");
         for (int i = 0; i < index; i++) {
@@ -15,6 +16,7 @@ public class Solution {
         System.out.println("]");
     }
 
+    //删除重复元素
     public int removeDuplicates(int[] nums) {
         int index = 1;
         for (int i = 1; i < nums.length; i++) {
