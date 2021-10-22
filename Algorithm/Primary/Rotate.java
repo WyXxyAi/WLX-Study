@@ -22,7 +22,7 @@ public class Rotate {
         return res;
     }
     public static void main(String[] args) {
-        int[] nums = {4,7};//,8,9,1,6,3,5
+        int[] nums = {4,7};
         new Rotate().rotate2(nums,3);
     }
 
