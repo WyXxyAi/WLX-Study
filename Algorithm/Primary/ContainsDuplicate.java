@@ -17,7 +17,7 @@ public class ContainsDuplicate {
         return false;
     }
 
-    //思路二:模仿冒泡排序，不排序只比较，想等就要退出。
+    //思路二:模仿冒泡排序，不排序只比较，相等就要退出。
     public boolean containsDuplicate02(int[] nums){
         if (nums.length<2){
             return false;
@@ -32,6 +32,11 @@ public class ContainsDuplicate {
         return false;
     }
 
+    //思路三:二分查找
+    public boolean containsDuplicate03(int[] nums){
+
+        return false;
+    }
     public static void main(String[] args) {
         int[] numsF = {7,1,5,3,6,4};
         int[] numsT = {7,1,5,3,1,4};
