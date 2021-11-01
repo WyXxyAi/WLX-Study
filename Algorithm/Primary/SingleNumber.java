@@ -32,7 +32,7 @@ public class SingleNumber {
     }
 
     public static void main(String[] args) {
-        int[] nums ={1,1,2,4,3,3,2};
+        int[] nums ={1,1,2,4,3,3,2,5};
         System.out.println(new SingleNumber().singleNumber02(nums));
 
     }

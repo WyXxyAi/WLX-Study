@@ -17,6 +17,10 @@ public class Solution {
     }
 
     //删除重复元素
+
+    /**
+     * 排序之后，后比前大往前移动一位
+     */
     public int removeDuplicates(int[] nums) {
         int index = 1;
         for (int i = 1; i < nums.length; i++) {
