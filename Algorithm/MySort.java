@@ -154,18 +154,19 @@ public class MySort {
                     nums[l] = nums[r];
                     nums[r] = temp;
                 }
+                if (l == r) {
+                    nums[left] = nums[l];
+                    nums[l] = point;
+                }
             }
-            if (l == r) {
-                nums[left] = nums[l];
-                nums[l] = point;
-            }
+
             quick(nums, 0, l-1);
             quick(nums, l + 1, right);
         }
     }
 
     public static void main(String[] args) {
-        int[] nums ={9,6,11,3,5,12,8,7,10,15,14,4,1,13,2};
+        int[] nums ={9,5,1,8,2,6,3,4,7};
         quick(nums,0,nums.length-1);
         System.out.println(Arrays.toString(nums));
     }

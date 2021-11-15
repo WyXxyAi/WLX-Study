@@ -53,9 +53,9 @@ public class Test {
         }
     }
     public static void main(String[] args) {
-        int []arr = {9,6,11,3,5,12,8,7,10,15,14,4,1,13,2};
-        sort(arr);
-        System.out.println(Arrays.toString(arr));
+        int a = 1;
+        a +=a++ + ++a;
+        System.out.println(a);
 
     }
 }
