@@ -3,6 +3,12 @@ package Algorithm.Questions;
 import java.util.*;
 
 public class TwoSum {
+    /**
+     * @param nums    数组
+     * @param target   两数之和
+     * @return  两数之和的下标
+     * @author wlx
+     */
     public int[] twosum(int[] nums,int target){
         Map map = new HashMap();
         int[] res = new int[2];

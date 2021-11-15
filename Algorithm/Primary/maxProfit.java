@@ -51,4 +51,5 @@ public class maxProfit {
         System.out.println(new maxProfit().maxProfit01(prices));
         System.out.println(new maxProfit().maxProfit02(prices));
     }
+
 }
