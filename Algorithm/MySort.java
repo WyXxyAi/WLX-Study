@@ -3,6 +3,11 @@ package Algorithm;
 import java.util.Arrays;
 
 public class MySort {
+    public static void swap(int[] nums,int a,int b){
+        int temp = nums[a];
+        nums[a]=nums[b];
+        nums[b]=temp;
+    }
     /**
      * 选择排序  平均复杂度O(n^2)
      * 寻找最小值索引，交换到前面
@@ -165,9 +170,57 @@ public class MySort {
         }
     }
 
+    /**
+     * 双轴快排 走有两个基准数
+     * 拆成3组,小于point1,大于point1小于point2,大于point2
+     * 三组继续递归排
+     */
+    public static void quickBiaxInit(int[] nums){
+        quickBiax(nums,0,nums.length-1);
+    }
+    public static void quickBiax(int[] nums,int left,int right){
+        if (left<right) {
+            if (nums[left] > nums[right]) {
+                swap(nums, left, right);
+            }
+            int point1 = nums[left];
+            int point2 = nums[right];
+            int i = left, j = right, k = i + 1;
+            loop:{
+                while (k < j) {
+                    if (nums[k] < point1) {
+                        swap(nums, k++, ++i);
+                    } else if (nums[k] >= point1 && nums[k] < point2) {
+                        k++;
+                    } else {
+                        while (nums[j] >= point2) {
+                            if (k==j){
+                                break loop;
+                            }
+                            j--;
+                        }
+                        if (nums[j] > point1 && nums[j] < point2) {
+                            swap(nums, k++, j);
+                        } else {
+                            swap(nums, ++i, j);
+                            swap(nums, k, j);
+                        }
+                    }
+                }
+            }
+            if (k == j) {
+                swap(nums, left, i);
+                swap(nums, right, j);
+                quickBiax(nums, left, i - 1);
+                quickBiax(nums, i + 1, j - 1);
+                quickBiax(nums, j + 1, right);
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int[] nums ={9,5,1,8,2,6,3,4,7};
-        quick(nums,0,nums.length-1);
+        int[] nums ={4,9,5,1,8,2,0,3,6,7};
+        quickBiaxInit(nums);
         System.out.println(Arrays.toString(nums));
     }
 }
