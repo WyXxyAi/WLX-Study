@@ -171,7 +171,7 @@ public class MySort {
     }
 
     /**
-     * 双轴快排 走有两个基准数
+     * 双轴快排 有有两个基准数
      * 拆成3组,小于point1,大于point1小于point2,大于point2
      * 三组继续递归排
      */
@@ -183,25 +183,28 @@ public class MySort {
             if (nums[left] > nums[right]) {
                 swap(nums, left, right);
             }
-            int point1 = nums[left];
-            int point2 = nums[right];
+            int point1 = nums[left];//左基准数
+            int point2 = nums[right];//右基准数
+            /*i左边第一个元素，也是 < point1 组的游标
+              j右边最后一个元素，也是 point2 > 组的游标,也是未确定组的右游标
+              k为未确定组的游标，当k = j时，未确定组全部排完，则一轮结束*/
             int i = left, j = right, k = i + 1;
             loop:{
                 while (k < j) {
-                    if (nums[k] < point1) {
+                    if (nums[k] < point1) {//小于point1，跟左边元素替换，++i是为了防止point1发生替换
                         swap(nums, k++, ++i);
-                    } else if (nums[k] >= point1 && nums[k] < point2) {
+                    } else if (nums[k] >= point1 && nums[k] < point2) {//在point1和point2之间，就继续走
                         k++;
-                    } else {
-                        while (nums[j] >= point2) {
-                            if (k==j){
+                    } else {//大于point2，不可直接与右边替换，因为不知道右边元素是多大，所以又三种情况
+                        while (nums[j] >= point2) {//如果右边元素大于point2就继续走
+                            if (k==j){//k和j相等了，就直接结束，跳出外层循环
                                 break loop;
                             }
                             j--;
                         }
-                        if (nums[j] > point1 && nums[j] < point2) {
+                        if (nums[j] > point1 && nums[j] < point2) {//右边元素在point1和point2之间，就继续走
                             swap(nums, k++, j);
-                        } else {
+                        } else {//小于point1，先跟++1替换，再跟k替换
                             swap(nums, ++i, j);
                             swap(nums, k, j);
                         }
