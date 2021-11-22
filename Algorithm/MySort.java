@@ -143,8 +143,8 @@ public class MySort {
      * 左边继续找基准数，右边同理
      * 平均复杂度O(nlog2n)
      */
-    public static void quick(int[] nums,int left,int right){
-        if (left<right) {
+    public static void quick(int[] nums,int left,int right) {
+        if (left < right) {
             int point = nums[left];
             int l = left + 1, r = right;
             while (l < r) {
@@ -165,11 +165,10 @@ public class MySort {
                 }
             }
 
-            quick(nums, 0, l-1);
+            quick(nums, 0, l - 1);
             quick(nums, l + 1, right);
         }
     }
-
     /**
      * 双轴快排 有有两个基准数
      * 拆成3组,小于point1,大于point1小于point2,大于point2

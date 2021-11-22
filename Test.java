@@ -52,10 +52,28 @@ public class Test {
             arr[left++] = temp[t++];
         }
     }
-    public static void main(String[] args) {
-        int j = 8;
-        while (--j>0){
-            System.out.println(j);
+    public static int MaxContinueArraySum(int a[]) {
+        int n = a.length;
+        int max = a[0];
+        int sum = a[0];
+        for(int i=1;i<n;i++){
+            sum = Math.max(sum+a[i], a[i]);
+            if(sum>=max){
+                max = sum;
+            }
         }
+        return max;
+    }
+    public static boolean TestBoolean(String s) {
+        String t = new String(s);
+        return t==s;
+    }
+    public static void main(String[] args) {
+        final byte x = 1;
+        final byte y = x+x;
+        System.out.println(y);
+        int temp = 0;
+        temp = 6-6==0?2-2==0?1:2:4;
+        System.out.println(temp);
     }
 }
