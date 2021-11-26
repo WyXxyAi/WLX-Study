@@ -3,28 +3,22 @@ package Algorithm.Questions;
 import java.util.*;
 
 public class TwoSum {
-    /**
-     * @param nums    数组
-     * @param target   两数之和
-     * @return  两数之和的下标
-     * @author wlx
-     */
-    public int[] twosum(int[] nums,int target){
-        Map map = new HashMap();
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> map = new HashMap();
         int[] res = new int[2];
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(target-nums[i])){
-                res = new int[]{ (int) map.get(target-nums[i]),i};
-                return res;
+                return res = new int[]{map.get(target-nums[i]),i};
             }
             map.put(nums[i],i);
         }
-        return res;
+        return nums;
     }
 
     public static void main(String[] args) {
-        int[] nums = {0,2,3,8,4,9};
-        nums = new TwoSum().twosum(nums,6);
-        System.out.println(Arrays.toString(nums));
+        int[] nums = {2,7,11,15};
+        int target = 9;
+        int[] res = new TwoSum().twoSum(nums,target);
+        System.out.println(Arrays.toString(res));
     }
 }

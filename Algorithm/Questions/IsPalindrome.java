@@ -1,6 +1,9 @@
-package Algorithm.Primary;
+package Algorithm.Questions;
 
 public class IsPalindrome {
+    /**
+     * 判断回文字符串
+     */
     public static boolean isPalindrome(String s) {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < s.length(); i++) {
@@ -14,8 +17,20 @@ public class IsPalindrome {
         return true;
     }
 
+    /**
+     * 判断回文数
+     */
+    public static boolean isPalindrome(int x) {
+        String s = String.valueOf(x);
+        for (int i = 0; i < s.length()/2; i++) {
+            if (s.charAt(i)!=s.charAt(s.length()-1-i))return false;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
-        System.out.println(isPalindrome(s));
+        int x = 123321;
+        System.out.println(isPalindrome(x));
     }
 }

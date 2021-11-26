@@ -1,6 +1,4 @@
-package Algorithm.Primary;
-
-import java.util.Map;
+package Algorithm.Questions;
 
 public class maxProfit {
     //无限交易无交易手续费

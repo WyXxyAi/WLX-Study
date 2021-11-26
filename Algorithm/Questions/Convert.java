@@ -1,4 +1,4 @@
-package Algorithm.Primary;
+package Algorithm.Questions;
 
 public class Convert {
     public static String convert(String s, int numRows) {

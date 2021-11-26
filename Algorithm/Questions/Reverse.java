@@ -1,4 +1,4 @@
-package Algorithm.Primary;
+package Algorithm.Questions;
 
 public class Reverse {
     public static int reverse(int x) {

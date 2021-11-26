@@ -1,7 +1,6 @@
-package Algorithm.Primary;
+package Algorithm.Questions;
 
 import java.util.HashSet;
-import java.util.ServiceConfigurationError;
 import java.util.Set;
 
 public class IsValidSudoku {

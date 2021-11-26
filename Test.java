@@ -7,14 +7,13 @@ public class Test {
     /**
      * 根据value获取key（只能获取最后一个符合条件的key）
      */
-    public Object getKey(Map map,Object value){
-        Object res = null;
-        for (Object o : map.keySet()) {
-            if (map.get(o)==value){
-                res = o;
+    public <E,T>E getKey(Map<E,T> map,T value){
+        for (E e : map.keySet()) {
+            if (map.get(e)==value){
+                return e;
             }
         }
-        return res;
+        return null;
     }
 
     public static void sort(int []arr){
@@ -64,16 +63,9 @@ public class Test {
         }
         return max;
     }
-    public static boolean TestBoolean(String s) {
-        String t = new String(s);
-        return t==s;
+    public boolean TestBoolean(String s){
+        return false;
     }
     public static void main(String[] args) {
-        final byte x = 1;
-        final byte y = x+x;
-        System.out.println(y);
-        int temp = 0;
-        temp = 6-6==0?2-2==0?1:2:4;
-        System.out.println(temp);
     }
 }

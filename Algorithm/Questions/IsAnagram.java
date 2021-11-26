@@ -1,4 +1,4 @@
-package Algorithm.Primary;
+package Algorithm.Questions;
 
 import java.util.Arrays;
 import java.util.HashMap;
