@@ -1,4 +1,4 @@
-package Algorithm.Primary;
+package Algorithm;
 
 public class PlusOne {
     /**

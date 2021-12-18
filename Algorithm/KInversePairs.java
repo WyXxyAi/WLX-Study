@@ -1,4 +1,4 @@
-package Algorithm.Questions;
+package Algorithm;
 
 public class KInversePairs {
     public int kInversePairs(int n,int k){

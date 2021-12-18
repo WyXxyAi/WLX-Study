@@ -1,4 +1,4 @@
-package Algorithm.Primary;
+package Algorithm;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package Algorithm.Questions;
+package Algorithm;
 
 public class MaxStr {
     //1.

@@ -1,4 +1,4 @@
-package Algorithm.Primary;
+package Algorithm;
 
 import java.util.HashSet;
 import java.util.ServiceConfigurationError;

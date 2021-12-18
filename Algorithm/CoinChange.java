@@ -1,4 +1,4 @@
-package Algorithm.Questions;
+package Algorithm;
 
 import java.util.Arrays;
 
